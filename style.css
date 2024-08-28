@@ -1,0 +1,51 @@
+body {
+    background-color: grey;
+    padding: 20px;
+    margin: 0; /* Ensure no default margin affects positioning */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: absolute; /* Change to absolute for positioning */
+    animation-name: square;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.square:hover {
+    animation-play-state: paused;
+}
+
+@keyframes square {
+    0% {
+        left: 0;
+        top: 0;
+        background-color: red;
+    }
+    25% {
+        left: 400px;
+        top: 0;
+        background-color: pink;
+    }
+    50% {
+        left: 200px;
+        top: 400px;
+        background-color: black;
+    }
+    75% {
+        left: 0;
+        top: 400px;
+        background-color: yellow;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        background-color: red;
+    }
+}
